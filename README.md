@@ -1,17 +1,23 @@
-# python 3.14
-Версия языка программирования на котором написан бот
+# API_TOKEN в main.py должен содержать токен будущего бота
+
+# Для входа как администратор нужно прописать:
+    `/regadmin my_admin_pass_123`
+
+# Python 3.14
+    Версия языка программирования на котором написан бот
+    можно установить через uv install python 3.14
 
 # uv python
 ### менеджер пакетов
-    uv pip install -r requirement-libs.txt
+    `uv pip install -r requirement-libs.txt`
+    (загружает все библиотеки из списка, в этом случае тоже самое что и `uv pip install aiogram`)
 
 
+## Основная библиотека: aiogram
+    `uv pip install aiogram`
+    Команда также загружает зависимости
 
-
-
-
-
-## libs
+## Все библиотеки включая зависимости
     aiofiles==25.1.0
     aiogram==3.28.2
     aiohappyeyeballs==2.6.2
@@ -30,3 +36,5 @@
     typing-extensions==4.15.0
     typing-inspection==0.4.2
     yarl==1.24.2
+
+

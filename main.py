@@ -16,13 +16,12 @@ from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKey
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
 
 
-
+API_TOKEN = '' 
+ADMIN_PASSWORD = "my_admin_pass_123"
+ADMINS_FILE = "admins.json"  
 
 
 router = Router()
-ADMIN_PASSWORD = "my_admin_pass_123"
-ADMINS_FILE = "admins.json"  
-API_TOKEN = '8715751563:AAGncNk3WCBwzHfGu72Mkkt_5wYWD8L9exw' 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
@@ -239,18 +238,8 @@ async def card_handler(message: types.Message, state: FSMContext):
     await state.clear()
 
 
-@router.message(Command("cancel"))
-@router.message(F.text.casefold() == "отмена")
-async def cmd_cancel(message: types.Message, state: FSMContext):
-    current_state = await state.get_state()
-    if current_state is None:
-        return
 
-    await state.clear()
-    await message.answer("Анкетирование отменено.")
-
-
-@router.message(Command("regadmin"))
+@dp.message(Command("regadmin"))
 async def register_admin(message: types.Message, command: CommandObject):
     if not command.args:
         await message.answer("Введите команду вместе с секретным паролем.\nПример: `/regadmin ваш_пароль`")
