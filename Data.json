@@ -1,0 +1,23 @@
+{
+    "TG_TOKEN":"",
+    "MAX_TOKEN":"",
+    
+    "ADMIN_PASSWORD":"my_admin_pass_123",
+    "ADMIN_FILE":"admins.json",
+
+    "START_TEXT":"Привет! Нажми на кнопку начать, чтобы сообщить о злодеянии.",
+    "ABOUT_US_TEXT":"secsot",
+    "LINK_TEXT":"https://secsot.online",
+    "DESCRIPTION_TEXT":"Привет! Это анкета для заполнения. Опишите, что произошло'",
+    "TIME_TEXT":"В какое примерно время это произошло?\n*Пример: 15:48*",
+    "DATE_TEXT":"Какого числа это произошло? *(В формате ДД.ММ.ГГГГ)*",
+    "FILE_TEXT":"Отправьте фото или файл (или нажмите кнопку ниже, если файла нет):",
+    "CARD_NUMBER_TEXT":"Укажите номер карты для вознаграждения:",
+    "RESULT_TEXT":"**Данные собраны**",
+
+
+    "SMTP_SERVER" : "mail.kalinkovo.com",
+    "SMTP_PORT" : 465,
+    "SENDER_EMAIL" : "secsotbot@kalinkovo.com",
+    "SENDER_PASSWORD" : "Ctrcjn<jn!2"
+}
