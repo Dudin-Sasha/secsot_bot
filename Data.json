@@ -16,8 +16,8 @@
     "RESULT_TEXT":"**Данные собраны**",
 
 
-    "SMTP_SERVER" : "mail.kalinkovo.com",
+    "SMTP_SERVER" : "",
     "SMTP_PORT" : 465,
-    "SENDER_EMAIL" : "secsotbot@kalinkovo.com",
-    "SENDER_PASSWORD" : "Ctrcjn<jn!2"
+    "SENDER_EMAIL" : "",
+    "SENDER_PASSWORD" : ""
 }
