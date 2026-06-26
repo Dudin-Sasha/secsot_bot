@@ -108,7 +108,7 @@ async def register_admin(event: MessageCreated, command = Command):
 async def bot_started(event: BotStarted):
     builder = InlineKeyboardBuilder()
     builder.row(
-        CallbackButton(text="Настучать", payload="start_form"),
+        CallbackButton(text="Доложить", payload="start_form"),
     )
     builder.row(
         CallbackButton(text="О сексот", payload="about_us"),
@@ -117,7 +117,7 @@ async def bot_started(event: BotStarted):
 
     await bot.send_message(
         chat_id=event.chat_id,
-        text="Выберите действие:",
+        text=__info['START_TEXT'],
         attachments=[builder.as_markup()]
     )
 
@@ -126,18 +126,18 @@ async def bot_started(event: BotStarted):
 async def button_creater(event: MessageCreated):
     builder = InlineKeyboardBuilder()
     builder.row(
-        CallbackButton(text="Настучать", payload="start_form"),
+        CallbackButton(text="Доложить", payload="start_form"),
     )
     builder.row(
         CallbackButton(text="О сексот", payload="about_us"),
         LinkButton(text="Наш Сайт", url="https://secsot.online"),
     )
 
-    await event.message.answer(
-        text="Выберите действие:",
+    await bot.send_message(
+        chat_id=event.chat_id,
+        text=__info['START_TEXT'],
         attachments=[builder.as_markup()]
     )
-
 
 @dp.message_created(F.message.body.text==("список"))
 async def button_creater(event: MessageCreated):

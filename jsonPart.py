@@ -99,12 +99,11 @@ def reg_new_admin(cmdArg, TG_id = -1, Max_id = -1):
                     if TG_id != -1 and i["TG_id"] == -1:
                         new_admin = {"TG_id":TG_id,"Max_id":i["Max_id"],"email":user_info[1]}
                         admins.remove(i)
-                        admins.append(new_admin)
+
 
                     elif Max_id != -1 and i["Max_id"] == -1:
                         new_admin = {"TG_id":i["TG_id"],"Max_id":Max_id,"email":user_info[1]}
                         admins.remove(i)
-                        admins.append(new_admin)
                     else:
                         return("Этот профиль уже есть")
         
